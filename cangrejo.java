@@ -22,5 +22,10 @@ public class cangrejo extends Actor
     {
         turn(-3);
     }
+    if(isTouching(Wrom.class))
+    {
+        removeTouching(Wrom.class);
+        Greenfoot.playSound("eating.wav");
+    }
 }  
 }
