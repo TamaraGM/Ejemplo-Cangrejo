@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class cangrejo extends Actor
 {
+    private int vidas;
     /**
      * Act - do whatever the cangrejo wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
