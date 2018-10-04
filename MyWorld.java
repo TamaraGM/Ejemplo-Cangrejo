@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends greenfoot.World
 {
-
+    private cangrejo cangrejo;
+    private GreenfootSound musica;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -19,7 +20,18 @@ public class MyWorld extends greenfoot.World
         super(560, 560, 1); 
         Tiempo tiempo = new Tiempo();
         this.addObject(tiempo,60,20);
-        //prepare();
+        lobster= new lobster;
+        addObject(lobster, 243, 147);
+        //prepare(totalGusanos);
+        musica = GreenfootSound("ufo-t-balt.mp3");
+    }
+    public void started ()
+    {
+        musica.playLoop();
+    }
+    public void stopped ()
+    {
+       musica.pause();
     }
 
     /**
