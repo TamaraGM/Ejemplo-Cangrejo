@@ -16,7 +16,12 @@ public class cangrejo extends Actor
         puntaje = new Counter("Puntos: ");
         puntaje.setValue(0);
     }
-    p
+    
+    public void addedToWorld(World world)
+    {
+        world.addObject(puntaje,400,20);
+    }
+    
     public void act() 
     {
         super.move(4);
@@ -34,13 +39,13 @@ public class cangrejo extends Actor
     }
     if(isTouching(Lobster.class))
     {
-        vidas.setvaule(vidas.getValue()-1);
+        vidas.setValue(vidas.getValue()-1);
         setLocation(250,250);
         Label perdiste = new Label("Perdiste una vida",30);
         getWorld().addObject(perdiste,250,250);
         Greenfoot.delay(50);
         getWorld().removeObject(perdiste);
-        getWorldOfType(cangrejo.class).accedeLangosta().setLocation(250,500);
+        getWorldOfType(MyWorld.class).accedeLangosta().setLocation(250,500);
     }
 }  
 }
